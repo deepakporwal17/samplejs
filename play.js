@@ -35,3 +35,68 @@ function ConcatArray(){
     array1.push('100');
     console.log(array1);
 }
+
+function ArraySamples(key){
+    switch (key) {
+        case 'foreach':
+            //const array1 = ['a', 'b', 'c'];
+            const array1 = [
+                {
+                id: 1, name : 'deepak'
+                },
+                {
+                    id: 2, name : 'arpit'
+                },
+                {
+                    id: 3, name : 'pratik'
+                }
+            ]
+            array1.forEach(element => console.log(element.name));
+            break;
+        case 'filterarray' :
+            const array2 = [
+                {
+                id: 1, name : 'deepak'
+                },
+                {
+                    id: 2, name : 'arpit'
+                },
+                {
+                    id: 3, name : 'pratik'
+                }
+            ]
+            var res = array2.filter((ele)=>{
+                if(ele.name=='arpit'){
+                    return ele;
+                }
+            })
+            console.log(res);
+
+            const array3 = ['a', 'b', 'c'];
+            const iterator = array3.keys();
+            
+            for (const key of iterator) {
+              console.log(key);
+            }
+            break;
+            case 'maparray':
+                const data = [
+                    {
+                    id: 1, name : 'deepak'
+                    },
+                    {
+                        id: 2, name : 'arpit'
+                    },
+                    {
+                        id: 3, name : 'pratik'
+                    }
+                ]
+                const newResult = data.map((ele)=>{
+                     return ele.name = 'name is ' + ele.name;
+                })
+                console.log(newResult); 
+                break;
+        default:
+            break;
+    }
+}
